@@ -3,6 +3,10 @@ name = "cln-plugin"
 version = "0.1.0"
 edition = "2021"
 
+[[example]]
+name = "cln-plugin-startup"
+path = "examples/cln-plugin-startup.rs"
+
 [dependencies]
 anyhow = "1.0.51"
 bytes = "1.1.0"
@@ -15,3 +19,7 @@ tokio-stream = "*"
 futures = "0.3"
 cln-rpc = { path = "../cln-rpc" }
 
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread", ] }
+env_logger = "*"
+cln-grpc = { path = "../cln-grpc" }
