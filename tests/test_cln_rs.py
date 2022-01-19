@@ -12,7 +12,7 @@ pytestmark = pytest.mark.skipif(
     reason='RUST is not enabled, skipping rust-dependent tests'
 )
 
-os.environ['RUST_LOG'] = "trace"
+os.environ["RUST_LOG"] = "trace"
 
 
 def test_rpc_client(node_factory):
